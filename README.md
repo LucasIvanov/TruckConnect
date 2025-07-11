@@ -1,30 +1,55 @@
-# Aplicativo de Logística Agrícola
+# TruckConnect App
 
-Este é um simples aplicativo de desktop para conectar produtores agrícolas a transportadoras. Produtores podem postar suas cargas secas disponíveis, e transportadoras podem visualizar essas cargas.
+Este é um aplicativo feito com **React Native e Expo** para conectar produtores agrícolas e transportadoras.
 
-## Funcionalidades
+## ✨ Funcionalidades
 
-- **Registro de Usuários**: Permite o cadastro de produtores e transportadoras.
-- **Login Separado**: Telas de login distintas para cada tipo de usuário.
-- **Postagem de Cargas**: Produtores podem publicar detalhes de suas cargas (produto, quantidade, origem, destino).
-- **Visualização de Cargas**: Transportadoras podem ver uma lista de todas as cargas disponíveis.
+-   **Login e Registro de Usuários**: Fluxo de autenticação com telas bem definidas.
+-   **Seleção de Perfil**: Usuários podem se cadastrar como "Produtor" ou "Transportadora".
+-   **Interface Moderna**: Design limpo e profissional, focado na experiência do usuário.
+-   **Navegação Eficiente**: Utiliza `expo-router` para uma navegação baseada em arquivos.
 
-## Tecnologias Utilizadas
-
-- **Python**: Linguagem de programação principal.
-- **Kivy**: Biblioteca de código aberto para o desenvolvimento de aplicações com interface de usuário natural (NUI).
-- **JSON**: Formato de arquivo para armazenamento de dados simples.
-
-## Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 
 ### Pré-requisitos
 
-- Python 3.6 ou superior
-- Pip (gerenciador de pacotes do Python)
+-   [Node.js](https://nodejs.org/) (versão LTS recomendada)
+-   [Git](https://git-scm.com/)
+-   Conta na [Expo](https://expo.dev/)
+-   Aplicativo **Expo Go** instalado no seu celular (iOS ou Android)
 
-### Instalação de Bibliotecas
+### Passos para Instalação
 
-Para executar este projeto, você precisará instalar a biblioteca Kivy. Você pode fazer isso usando o pip:
+1.  **Clone o repositório:**
+    ```bash
+    git clone <URL_DO_SEU_REPOSITÓRIO>
+    cd <NOME_DA_PASTA>
+    ```
 
-```bash
-pip install kivy
+2.  **Instale as dependências do projeto:**
+    ```bash
+    npm install
+    ```
+    ou
+    ```bash
+    yarn install
+    ```
+
+3.  **Instale a CLI da Expo (se ainda não tiver):**
+    ```bash
+    npm install -g expo-cli
+    ```
+
+4.  **Execute o aplicativo:**
+    ```bash
+    npx expo start
+    ```
+
+5.  **Abra no seu celular:**
+    -   Após executar o comando acima, um QR Code aparecerá no terminal.
+    -   Abra o aplicativo **Expo Go** no seu celular e escaneie o QR Code.
+    -   O aplicativo será carregado e você poderá testá-lo em tempo real.
+
+### 폰트 (Fontes)
+
+Este projeto utiliza a família de fontes **Poppins**. As fontes já estão incluídas na pasta `/assets/fonts` e são carregadas no arquivo `app/_layout.tsx`.
