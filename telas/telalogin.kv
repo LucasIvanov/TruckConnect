@@ -1,0 +1,55 @@
+#:kivy 1.11.1
+
+<TelaLoginProdutor>:
+    email: email_input
+    senha: senha_input
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 50
+        spacing: 20
+        Label:
+            text: 'Login do Produtor'
+            font_size: '24sp'
+        TextInput:
+            id: email_input
+            hint_text: 'Email'
+        TextInput:
+            id: senha_input
+            hint_text: 'Senha'
+            password: True
+        Button:
+            text: 'Login'
+            on_press: root.fazer_login()
+        Button:
+            text: 'Ir para Login Transportadora'
+            on_press: root.manager.current = 'login_transportadora'
+        Button:
+            text: 'Registrar'
+            on_press: root.manager.current = 'registro'
+
+<TelaLoginTransportadora>:
+    email: email_input
+    senha: senha_input
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 50
+        spacing: 20
+        Label:
+            text: 'Login da Transportadora'
+            font_size: '24sp'
+        TextInput:
+            id: email_input
+            hint_text: 'Email'
+        TextInput:
+            id: senha_input
+            hint_text: 'Senha'
+            password: True
+        Button:
+            text: 'Login'
+            on_press: root.fazer_login()
+        Button:
+            text: 'Ir para Login Produtor'
+            on_press: root.manager.current = 'login_produtor'
+        Button:
+            text: 'Registrar'
+            on_press: root.manager.current = 'registro'

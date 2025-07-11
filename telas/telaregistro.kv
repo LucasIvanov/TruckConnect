@@ -1,0 +1,35 @@
+#:kivy 1.11.1
+
+<TelaRegistro>:
+    nome: nome_input
+    email: email_input
+    senha: senha_input
+    tipo_usuario: tipo_usuario_spinner
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 50
+        spacing: 20
+        Label:
+            text: 'Registro de Usuário'
+            font_size: '24sp'
+        TextInput:
+            id: nome_input
+            hint_text: 'Nome Completo'
+        TextInput:
+            id: email_input
+            hint_text: 'Email'
+        TextInput:
+            id: senha_input
+            hint_text: 'Senha'
+            password: True
+        Spinner:
+            id: tipo_usuario_spinner
+            text: 'Produtor'
+            values: ['Produtor', 'Transportadora']
+        Button:
+            text: 'Registrar'
+            on_press: root.registrar_usuario()
+        Button:
+            text: 'Voltar para o Login'
+            on_press: root.manager.current = 'login_produtor'
